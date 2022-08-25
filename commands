@@ -1,1 +1,2 @@
 docker run --name events -p 5433:5432 -e POSTGRES_USER=postgresUser -e POSTGRES_PASSWORD=postgresPW -e POSTGRES_DB=events -d postgres
+docker stop events_backend; docker rm events_backend; docker build -t events_backend:latest .; docker run --rm -it --env-file=.env -v ${PWD}:/usr/src/app -p 8000:8000 --name events_backend events_backend:latest
