@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "05bd4547-fb94-47dd-90b3-6d68ccbda587",
+		"name": "api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17782957"
+	},
+	"item": [
+		{
+			"name": "users/signup/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_email\": \"aldo.matus4@gmail.com\",\r\n    \"is_admin\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{local_url}}/users/signup/"
+			},
+			"response": []
+		},
+		{
+			"name": "rooms/create/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"is_available\": 1,\r\n    \"capacity_of_users\": 2,\r\n    \"busy_places\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{local_url}}/rooms/create/"
+			},
+			"response": []
+		},
+		{
+			"name": "rooms/delete/",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"room_id\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{local_url}}/rooms/delete/"
+			},
+			"response": []
+		},
+		{
+			"name": "/events/create/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"room\": 5,\r\n    \"is_public\": 1,\r\n    \"event_date\": \"2022-03-21T01:30:08\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{local_url}}/events/create/"
+			},
+			"response": []
+		},
+		{
+			"name": "/events/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{local_url}}/events/"
+			},
+			"response": []
+		},
+		{
+			"name": "booking/create/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": 6,\r\n    \"event\": 17,\r\n    \"is_active\": 1,\r\n    \"event_date\": \"2020-03-20T01:30:08\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{local_url}}/booking/create/"
+			},
+			"response": []
+		},
+		{
+			"name": "/booking/cancel/",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": 6,\r\n    \"event\": 17\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{local_url}}/booking/cancel/"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "local_url",
+			"value": "http://127.0.0.1:8000"
+		}
+	]
+}
