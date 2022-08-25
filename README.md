@@ -101,7 +101,7 @@ Link to visit postman website: - [Link](https://www.postman.com/downloads/)
 For this project you need to have the postgres database installed. If you have not installed it yet, you can create a dockerfile to run your database, you can work with its graphical interface or from the console, both ways will serve you.
 Let's create a database from the terminal:
 
-1. Once postgres is installed we can open a terminal and type the following code to access postgres
+1. open a terminal and type the following code to install postgres
 ```docker
    docker run --name events -p 5433:5432 -e POSTGRES_USER=postgresUser -e POSTGRES_PASSWORD=postgresPW -e POSTGRES_DB=events -d postgres
 ```
