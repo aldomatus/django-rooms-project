@@ -171,6 +171,12 @@ DATABASE_PORT=5433
 
 Inside the repository there is a file called api.postman collection.json with which the tests can be done towards the endpoints
 
+### Entity relationship model
+For the construction of the database, the relationship entity model was made with which the relationships between each table were deduced. 
+<div align="center">
+ <img src=https://i.imgur.com/K8FhzRK.jpg width=500 alt="Header" >
+</div>
+
 ### Requirements:
 1. The business can create a room with M capacity
       * POST
