@@ -171,7 +171,26 @@ DATABASE_PORT=5433
 
 Inside the repository there is a file called api.postman collection.json with which the tests can be done towards the endpoints
 
-
+### Requirements:
+1. The business can create a room with M capacity
+      * POST
+      * Send the json through the url: http://127.0.0.1:8000/rooms/create/
+     ```json
+        {
+         "is_available": 1,
+         "capacity_of_users": 10,
+         "busy_places": 0
+        }
+     ```
+   Response example:
+      ```json
+        Status: 201 Created
+        {
+         "capacity_of_users": 10,
+         "busy_places": 0,
+         "is_available": true
+        }
+     ```
 
 
 <!-- ROADMAP -->
