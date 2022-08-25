@@ -107,10 +107,6 @@ Let's create a database from the terminal:
 
 <!-- EXPLAIN CODE -->
 ## Description of the REST API code
-<details close="close">
-    <summary>Click to see all the code</summary>
-
-  
 
 
 ### Installation
