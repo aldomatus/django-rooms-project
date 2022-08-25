@@ -125,8 +125,11 @@ DATABASE_PORT=5433
    ```
    git clone git@github.com:aldomatus/django-rooms-project.git
    ```
-  
-2. inside our dir we create a virtual environment to have our libraries together.
+2. If you want, you can use a Dockerfile to run the project 🐳 otherwise follow the steps from 3
+   ```docker
+   docker build -t events_backend:latest .; docker run --rm -it --env-file=.env -v ${PWD}:/usr/src/app -p 8000:8000 --name events_backend events_backend:latest
+   ```
+3. inside our dir we create a virtual environment to have our libraries together.
   
       3.1 To download the library that allows us to create virtual environments
       ```
@@ -143,22 +146,22 @@ DATABASE_PORT=5433
       source env_dir/bin/activate
       ```
   
-3. Once the virtual environment is activated, we return to the folder where the requirements.txt file is and to install our libraries we must type the following line. (if you are using python 3 you only must type python3)
+4. Once the virtual environment is activated, we return to the folder where the requirements.txt file is and to install our libraries we must type the following line. (if you are using python 3 you only must type python3)
      ```
      python -m pip install -r requirements.txt
      ```
 
-4. we run the server with...
+5. we run the server with...
      ```
      python manage.py runserver
      ```
 
-5. If all goes well, our application should already be executing the manage.py file with python using the postgres database, now we just have to check by entering the following link in our browser:
+6. If all goes well, our application should already be executing the manage.py file with python using the postgres database, now we just have to check by entering the following link in our browser:
 
    ```
    http://localhost:8000/
    ```
-6. You should have a response like this:
+7. You should have a response like this:
    ```
    {
       "message": "Welcome to my API"
