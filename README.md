@@ -8,7 +8,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/aldomatus/flask-sqlachemy_postgresql_rest-api">
+  <a href="https://github.com/aldomatus/django-rooms-project">
     <img src="https://i.imgur.com/CgA9TyV.png" alt="Header" >
   </a>
    <div align="center">
@@ -19,7 +19,7 @@
   <h4 align="center"></h4>
 
   <p align="center">
-    A REST api made with Django Rest FRamework in which you can practice the methods: GET, POST, PUT and DELETE, of a tasks list application. This API will be connected to the postgres database.
+    A REST api made with Django Rest Framework in which you can practice the methods: GET, POST, PUT and DELETE, of a tasks list application. This API will be connected to the postgres database.
   </p>
 </p>
 
@@ -79,7 +79,7 @@ Django REST framework is a powerful and flexible toolkit for building Web APIs.
 With their streamlined API client, you can quickly and easily send REST, SOAP, GraphQL, and GRPC requests directly within Insomnia.
 Link to visit insomnia website: - [Link](https://insomnia.rest/download)
 <div align="center">
- <img src=https://seeklogo.com/images/I/insomnia-logo-A35E09EB19-seeklogo.com.png width="150" alt="Header" >
+ <img src=https://seeklogo.com/images/I/insomnia-logo-A35E09EB19-seeklogo.com.png width="100" alt="Header" >
   </div>
 
 
@@ -87,7 +87,7 @@ Link to visit insomnia website: - [Link](https://insomnia.rest/download)
 Postman is a collaboration platform for API development. Postman's features simplify each step of building an API and streamline collaboration so you can create better APIs—faster.
 Link to visit postman website: - [Link](https://www.postman.com/downloads/)
 <div align="center">
- <img src=https://seeklogo.com/images/P/postman-logo-F43375A2EB-seeklogo.com.png width="150" alt="Header" >
+ <img src=https://seeklogo.com/images/P/postman-logo-F43375A2EB-seeklogo.com.png width="100" alt="Header" >
 </div>
 
 
@@ -105,73 +105,77 @@ Let's create a database from the terminal:
    docker run --name events -p 5433:5432 -e POSTGRES_USER=postgresUser -e POSTGRES_PASSWORD=postgresPW -e POSTGRES_DB=events -d postgres
 ```
 
+### .env file 🌍 (Example)
+```
+DATABASE_HOST=192.168.0.116
+DATABASE_USER=postgresUser
+DATABASE_PASSWORD=postgresPW
+DATABASE_NAME=events
+DATABASE_PORT=5433
+```
+
 <!-- EXPLAIN CODE -->
 ## Description of the REST API code
 
 
 ### Installation
 
-1. To obtain my repository you must create a folder in a desired directory and within this folder open a terminal or use cmd in the case of windows.
-2. Clone the repo
+1. Clone the repo
    ```
    git clone git@github.com:aldomatus/django-rooms-project.git
-   
    ```
   
-3. inside our dir we create a virtual environment to have our libraries together. we do it as follows
+2. inside our dir we create a virtual environment to have our libraries together. we do it as follows
   
       3.1 To download the library that allows us to create virtual environments
       ```
       sudo apt-get install python3-venv
-      
       ```
 
       3.2. Create the virtual environment
       ```
-      python3 -m venv folder_name
-      
+      python3 -m venv env_dir
       ```
     
       3.3. Activate the virtual environment we go to the created folder and inside the terminal we write:
       ```
       source env_dir/bin/activate
-      
       ```
   
-4. Once the virtual environment is activated, we return to the folder where the requirements.txt file is and to install our libraries we must type the following line. (if you are using python 3 you only must type python3)
-  ```
-  python -m pip install -r requirements.txt
-  
-  ```
+3. Once the virtual environment is activated, we return to the folder where the requirements.txt file is and to install our libraries we must type the following line. (if you are using python 3 you only must type python3)
+     ```
+     python -m pip install -r requirements.txt
+     ```
 
-5. we run the server with...
-  ```
-  python manage.py runserver
-  
-  ```
+4. we run the server with...
+     ```
+     python manage.py runserver
+     ```
 
-8. If all goes well, our application should already be executing the app.py file with python using the postgres database, now we just have to check by entering the following link in our browser:
+5. If all goes well, our application should already be executing the manage.py file with python using the postgres database, now we just have to check by entering the following link in our browser:
 
    ```
    http://localhost:8000/
    ```
-7. You should have a response like this:
+6. You should have a response like this:
    ```
-   {"message": "Welcome to my API"}
+   {
+      "message": "Welcome to my API"
+   }
    ```
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-With this base you can make any flask code, modify the API and adapt it to your projects.
+inside the repository there is a file called api.postman collection.json with which the tests can be done towards the endpoints
 
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/aldomatus/flask-sqlachemy_postgresql_rest-api/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/aldomatus/django-rooms-project/issues) for a list of proposed features (and known issues).
 
 
 
@@ -193,12 +197,9 @@ Contributions are what make the open source community such an amazing place to b
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-## References 
-  - [1 pythonbasics.org](https://pythonbasics.org/flask-http-methods/) 
-
 <!-- CONTACT -->
 ## Contact
 
 Aldo Matus - [Linkedin](https://www.linkedin.com/in/aldomatus/) [Facebook](https://www.facebook.com/aldo.matusmartinez/)
 
-Project Link: [Repository](https://github.com/aldomatus/flask-sqlachemy_postgresql_rest-api/)
+Project Link: [Repository](https://github.com/aldomatus/django-rooms-project)

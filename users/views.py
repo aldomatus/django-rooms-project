@@ -23,3 +23,9 @@ class UserAPIView(APIView):
                              "error": f"{str(e)} line: {exc_tb.tb_lineno}"
                              },
                             status=status.HTTP_400_BAD_REQUEST)
+
+
+class HomeAPIView(APIView):
+    def get(self, request, *args, **kwargs):
+        return Response({"message": "Welcome to my API"},
+                        status=status.HTTP_200_OK)
